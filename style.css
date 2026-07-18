@@ -1,0 +1,185 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+body {
+    background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+                url('flowers GIF.gif') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+#tarjeta {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    padding: 40px;
+    width: 90%;
+    max-width: 450px;
+    text-align: center;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6); 
+}
+
+#tarjeta img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    margin-bottom: 20px;
+}
+
+#tarjeta h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+#tarjeta p {
+    color: #b9bbbe;
+    font-size: 0.95rem;
+    font-weight: 400;
+    margin-bottom: 25px;
+}
+
+.redes {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.redes a {
+    color: #ffffff;
+    font-size: 2.3rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+    text-decoration: none; 
+}
+
+.redes a:hover {
+    color: #736A6A;
+    transform: scale(1.10);
+}
+
+.reproductor {
+    background: rgba(225, 255, 255, 0.04); 
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 15px; 
+    padding: 20px;
+    margin-top: 30px;
+}
+
+.info-musica .cancion { 
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 2px; 
+}
+
+.info-musica .artista {
+    color: #b9bbbe;
+    font-size: 0.85rem;
+    margin-bottom: 15px;
+}
+
+.controles button {
+    background: #ffffff;
+    border: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.1rem; 
+    color: #111214;
+    transition: transform 0.2s ease, background-color 0.2s ease; 
+    margin-bottom: 15px; 
+    display: inline-flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+.controles button .fa-play {
+    padding-left: 3px;
+}
+
+.controles button:hover {
+    transform: scale(1.10); 
+    background: #736A6A;
+}
+
+.progreso-contenedor {
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between;
+    gap: 10px; 
+    font-size: 0.75rem;
+    color: #b9bbbe; 
+}
+
+.barra-progreso { 
+    flex: 1; 
+    height: 5px; 
+    background: rgba(255, 255, 255, 0.1); 
+    border-radius: 3px; 
+    position: relative; 
+    cursor: pointer; 
+}
+
+.progreso { 
+    height: 100%; 
+    width: 0%; 
+    background: #ffffff; 
+    border-radius: 3px; 
+    transition: width 0.1s linear; 
+}
+
+.volumen {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    gap: 10px; 
+    margin-top: 15px;
+    color: #b9bbbe;
+    font-size: 0.9rem; 
+}
+
+#control-volumen {
+    -webkit-appearance: none; 
+    appearance: none; 
+    width: 80px;
+    height: 4px; 
+    background: linear-gradient(to right, #ffffff 40%, rgba(255, 255, 255, 0.1) 40%) ; 
+    border-radius: 3px; 
+    outline: none; 
+    cursor: pointer; 
+    transition: background 0.3s ease; 
+}
+
+#control-volumen:hover {
+    background: rgba(255, 255, 255, 0.2); 
+}
+
+#control-volumen::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none; 
+    width: 10px;
+    height: 10px; 
+    border-radius: 50%; 
+    background: #ffffff; 
+    cursor: pointer; 
+    transition: transform 0.1s ease; 
+}
+
+#control-columen::-webkit-slider-thumb:hover {
+    transform:scale(1.3);
+}
