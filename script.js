@@ -9,6 +9,31 @@ const iconoVolumen = document.getElementById('icono-volumen');
 
 const barraProgreso = document.querySelector('.barra-progreso');
 
+const overlay = document.getElementById('overlay-bienvenida');
+const gifBienvenida = document.getElementById('gif-bienvenida');
+
+if (overlay){
+    overlay.addEventListener('click', () => {
+        overlay.classList.add('oculto');
+        if (audio && audio.paused){
+            audio.play();
+            if (btnPlay){
+                btnPlay.innerHTML = '<i class="fas fa-pause"></i>'; 
+            }
+        }
+    });
+}
+
+if (gifBienvenida){
+    overlay.addEventListener('mousemove', (e) => {
+        const x = (window.innerWidth / 2 - e.clientX) / 25; 
+        const y = (window.innerHeight / 2 - e.clientY) / 25;
+        gifBienvenida.style.transform = `translate(${x}px, ${y}px) scale(1.05)`;
+    });
+}
+
+
+
 function ajustesMusica() {
     if (audio.paused) {
         audio.play();
@@ -81,4 +106,13 @@ function cambiarProgreso(e) {
 
 if (barraProgreso) {
     barraProgreso.addEventListener('click', cambiarProgreso);
+    audio.addEventListener('ended', () => {
+        if (btnPlay){
+            btnPlay.innerHTML = '<i class="fas fa-play"></i>'; 
+        }
+        if (progreso) {
+            progreso.style.width = '0%';
+        }
+    });
 }
+
