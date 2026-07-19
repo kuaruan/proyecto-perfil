@@ -92,6 +92,31 @@ body {
     margin-bottom: 15px;
 }
 
+.controles {
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    gap: 20px; 
+    margin-bottom: 15px; 
+}
+
+.btn-secundario {
+    background: none; 
+    border: none; 
+    color: #b9bbbe;
+    font-size: 1.2rem;
+    cursor: pointer; 
+    transition: color 0.2s ease, transform 0.2s ease;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-secundario:hover{
+    color: #111214;
+    transform: scale(1.10); 
+}
+
 .controles button {
     background: #ffffff;
     border: none;
@@ -114,7 +139,7 @@ body {
 
 .controles button:hover {
     transform: scale(1.10); 
-    background: #736A6A;
+    background: #ffffff;
 }
 
 .progreso-contenedor {
@@ -183,3 +208,4 @@ body {
 #control-columen::-webkit-slider-thumb:hover {
     transform:scale(1.3);
 }
+
